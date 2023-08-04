@@ -1,4 +1,5 @@
 Binaries/
 **.sln
 **.vcxproj*
+**Intermediates/
 .vs/
