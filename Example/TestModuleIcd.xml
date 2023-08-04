@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharedMemorySegment Name="TestShMemSeg">
+   <Module Name="TestModule">
+      <Inputs>
+         <Input>
+            <Name>example1_integer_input</Name>
+            <Description>description</Description>
+            <Type>uint32_t</Type>
+            <Value>0</Value>
+         </Input>
+         <Input>
+            <Name>example2_double_input</Name>
+            <Type>double</Type>
+            <Value>0.0</Value>
+         </Input>
+      </Inputs>
+      <Outputs>
+         <Output>
+            <Name>example1_integer_output</Name>
+            <Type>uint32_t</Type>
+            <Value>0</Value>
+         </Output>
+         <Output>
+            <Name>example2_double_output</Name>
+            <Type>double</Type>
+            <Value>0.0</Value>
+         </Output>
+      </Outputs>
+   </Module>
+</SharedMemorySegment>

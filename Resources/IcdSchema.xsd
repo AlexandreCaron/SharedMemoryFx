@@ -1,0 +1,42 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SharedMemorySegment" type="SharedMemorySegmentType"/>
+  <xs:complexType name="InputType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="Name"/>
+      <xs:element type="xs:string" name="Description" minOccurs="0"/>
+      <xs:element type="xs:string" name="Type"/>
+      <xs:element type="xs:float" name="Value"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InputsType">
+    <xs:sequence>
+      <xs:element type="InputType" name="Input" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OutputType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="Name"/>
+      <xs:element type="xs:string" name="Description" minOccurs="0"/>
+      <xs:element type="xs:string" name="Type"/>
+      <xs:element type="xs:float" name="Value"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OutputsType">
+    <xs:sequence>
+      <xs:element type="OutputType" name="Output" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModuleType">
+    <xs:sequence>
+      <xs:element type="InputsType" name="Inputs"/>
+      <xs:element type="OutputsType" name="Outputs"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="Name"/>
+  </xs:complexType>
+  <xs:complexType name="SharedMemorySegmentType">
+    <xs:sequence>
+      <xs:element type="ModuleType" name="Module"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="Name"/>
+  </xs:complexType>
+</xs:schema>
